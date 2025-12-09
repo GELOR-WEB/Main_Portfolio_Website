@@ -73,3 +73,32 @@
         document.querySelectorAll('.window').forEach(win => {
             win.addEventListener('mousedown', () => bringToFront(win));
         });
+
+        // Start Menu functions
+        function toggleStartMenu() {
+            const menu = document.getElementById('startMenu');
+            menu.classList.toggle('active');
+        }
+
+        function openAllWindows() {
+            ['about', 'tech', 'skills', 'projects', 'resume'].forEach((id, index) => {
+                setTimeout(() => {
+                    openWindow(id);
+                    const win = document.getElementById(id);
+                    win.style.left = (50 + index * 30) + 'px';
+                    win.style.top = (50 + index * 30) + 'px';
+                }, index * 100);
+            });
+            toggleStartMenu();
+        }
+
+        // Close start menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const menu = document.getElementById('startMenu');
+            const startBtn = document.querySelector('.start-btn');
+            if (menu.classList.contains('active') && 
+                !menu.contains(e.target) && 
+                !startBtn.contains(e.target)) {
+                menu.classList.remove('active');
+            }
+        });
