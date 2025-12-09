@@ -68,7 +68,10 @@ body {
 #desktop {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(180deg, #5a7fbe 0%, #004e98 100%);
+    background-image: url('../public/images/bg.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
     position: relative;
     display: none;
 }
@@ -487,13 +490,17 @@ body {
     border-color: #000 #fff #fff #000;
 }
 
+.resume{
+    justify-content: center;
+}
+
 .resume-content {
     padding: 0;
     background: #fff;
     border: 2px solid;
     border-color: #808080 #fff #fff #808080;
-    min-height: 500px;
-    height: 600px;
+    min-height: 700px;
+    height: 800px;
     position: relative;
 }
 
