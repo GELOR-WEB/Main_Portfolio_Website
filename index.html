@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Windows XP</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/main.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- Boot Screen -->
+    <div id="boot-screen">
+        <div class="xp-logo">Windows <span>XD</span></div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
+    <!-- Desktop -->
+    <div id="desktop">
+        <div class="desktop-icons">
+            <div class="icon" onclick="openWindow('about')">
+                <div class="icon-img">👤</div>
+                <div class="icon-label">About Me</div>
+            </div>
+            <div class="icon" onclick="openWindow('tech')">
+                <div class="icon-img">💻</div>
+                <div class="icon-label">Tech Stack</div>
+            </div>
+            <div class="icon" onclick="openWindow('skills')">
+                <div class="icon-img">⚡</div>
+                <div class="icon-label">Soft Skills</div>
+            </div>
+            <div class="icon" onclick="openWindow('projects')">
+                <div class="icon-img">📁</div>
+                <div class="icon-label">Projects</div>
+            </div>
+            <div class="icon" onclick="openWindow('resume')">
+                <div class="icon-img">📄</div>
+                <div class="icon-label">Resume</div>
+            </div>
+        </div>
+
+        <!-- About Me Window -->
+        <div id="about" class="window" style="top: 50px; left: 50px;">
+            <div class="window-header" onmousedown="dragStart(event, 'about')">
+                <div class="window-title">
+                    <div class="window-title-icon">👤</div>
+                    <span>About Me</span>
+                </div>
+                <div class="window-controls">
+                    <div class="window-btn" onclick="closeWindow('about')">✕</div>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>About Me</h2>
+                <p>Hello! I'm a passionate developer with a love for creating innovative solutions and beautiful user experiences. With expertise in modern web technologies, I strive to build applications that make a difference.</p>
+                <p>I'm constantly learning and exploring new technologies to stay at the forefront of web development. My goal is to create software that is not only functional but also delightful to use.</p>
+                <p>When I'm not coding, you can find me contributing to open-source projects, reading tech blogs, or experimenting with new frameworks and tools.</p>
+            </div>
+        </div>
+
+        <!-- Tech Stack Window -->
+        <div id="tech" class="window" style="top: 80px; left: 80px;">
+            <div class="window-header" onmousedown="dragStart(event, 'tech')">
+                <div class="window-title">
+                    <div class="window-title-icon">💻</div>
+                    <span>Tech Stack</span>
+                </div>
+                <div class="window-controls">
+                    <div class="window-btn" onclick="closeWindow('tech')">✕</div>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>My Tech Stack</h2>
+                
+                <div class="skill-category">
+                    <h3>Languages & Frameworks</h3>
+                    <ul>
+                        <li>JavaScript (ES6+), TypeScript</li>
+                        <li>React, Vue.js, Angular</li>
+                        <li>Node.js, Express</li>
+                        <li>Python, Django, Flask</li>
+                        <li>HTML5, CSS3</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Styling & Tooling</h3>
+                    <ul>
+                        <li>Tailwind CSS, Bootstrap, Material-UI</li>
+                        <li>Sass/SCSS, CSS Modules</li>
+                        <li>Webpack, Vite, Rollup</li>
+                        <li>Git, GitHub Actions</li>
+                        <li>Jest, Cypress, Testing Library</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Databases & Cloud</h3>
+                    <ul>
+                        <li>PostgreSQL, MySQL, MongoDB</li>
+                        <li>Redis, Firebase</li>
+                        <li>AWS (EC2, S3, Lambda)</li>
+                        <li>Google Cloud Platform</li>
+                        <li>Docker, Kubernetes</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Dev Tools</h3>
+                    <ul>
+                        <li>VS Code, WebStorm</li>
+                        <li>Postman, Insomnia</li>
+                        <li>Chrome DevTools</li>
+                        <li>Figma, Adobe XD</li>
+                        <li>Jira, Trello, Linear</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>APIs & Services</h3>
+                    <ul>
+                        <li>RESTful APIs, GraphQL</li>
+                        <li>WebSocket, Socket.io</li>
+                        <li>OAuth 2.0, JWT</li>
+                        <li>Stripe, PayPal integration</li>
+                        <li>SendGrid, Twilio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soft Skills Window -->
+        <div id="skills" class="window" style="top: 110px; left: 110px;">
+            <div class="window-header" onmousedown="dragStart(event, 'skills')">
+                <div class="window-title">
+                    <div class="window-title-icon">⚡</div>
+                    <span>Soft Skills</span>
+                </div>
+                <div class="window-controls">
+                    <div class="window-btn" onclick="closeWindow('skills')">✕</div>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li><strong>Problem Solving:</strong> Analytical approach to breaking down complex challenges into manageable solutions</li>
+                    <li><strong>Communication:</strong> Clear and effective communication with team members and stakeholders</li>
+                    <li><strong>Collaboration:</strong> Experience working in agile teams and contributing to collective success</li>
+                    <li><strong>Time Management:</strong> Ability to prioritize tasks and meet deadlines efficiently</li>
+                    <li><strong>Adaptability:</strong> Quick learner who thrives in dynamic environments</li>
+                    <li><strong>Attention to Detail:</strong> Meticulous in code quality and user experience</li>
+                    <li><strong>Leadership:</strong> Experience mentoring junior developers and leading technical discussions</li>
+                    <li><strong>Critical Thinking:</strong> Evaluating solutions from multiple perspectives</li>
+                    <li><strong>Creativity:</strong> Innovative approach to design and problem-solving</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projects Window -->
+        <div id="projects" class="window" style="top: 140px; left: 140px;">
+            <div class="window-header" onmousedown="dragStart(event, 'projects')">
+                <div class="window-title">
+                    <div class="window-title-icon">📁</div>
+                    <span>Personal Projects</span>
+                </div>
+                <div class="window-controls">
+                    <div class="window-btn" onclick="closeWindow('projects')">✕</div>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Personal Projects</h2>
+                
+                <div class="project-card">
+                    <h3>Project One - E-Commerce Platform</h3>
+                    <p><strong>Tech:</strong> React, Node.js, MongoDB, Stripe</p>
+                    <p>A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard. Features include product management, shopping cart, and order tracking.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project Two - Task Management App</h3>
+                    <p><strong>Tech:</strong> Vue.js, Firebase, Tailwind CSS</p>
+                    <p>Real-time collaborative task management application with drag-and-drop functionality, team workspaces, and deadline notifications.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project Three - Weather Dashboard</h3>
+                    <p><strong>Tech:</strong> React, OpenWeather API, Chart.js</p>
+                    <p>Interactive weather dashboard displaying current conditions and forecasts with beautiful visualizations and location-based services.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project Four - Portfolio CMS</h3>
+                    <p><strong>Tech:</strong> Next.js, Sanity.io, TypeScript</p>
+                    <p>A headless CMS-powered portfolio website with blog functionality, project showcase, and contact forms. Optimized for SEO and performance.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Window -->
+        <div id="resume" class="window" style="top: 170px; left: 170px;">
+            <div class="window-header" onmousedown="dragStart(event, 'resume')">
+                <div class="window-title">
+                    <div class="window-title-icon">📄</div>
+                    <span>Resume</span>
+                </div>
+                <div class="window-controls">
+                    <div class="window-btn" onclick="closeWindow('resume')">✕</div>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="resume-viewer">
+                    <div class="resume-buttons">
+                        <button class="xp-button" onclick="alert('Download functionality would trigger here')">Download Resume</button>
+                        <button class="xp-button" onclick="alert('Print functionality would trigger here')">Print</button>
+                    </div>
+                    <div class="resume-content">
+                        <h2>Your Name</h2>
+                        <p><strong>Full Stack Developer</strong></p>
+                        <br>
+                        <h3>Experience</h3>
+                        <p><strong>Senior Developer</strong> - Company Name (2022-Present)</p>
+                        <p>Led development of enterprise applications and mentored junior developers.</p>
+                        <br>
+                        <p><strong>Full Stack Developer</strong> - Previous Company (2020-2022)</p>
+                        <p>Developed and maintained multiple client-facing applications.</p>
+                        <br>
+                        <h3>Education</h3>
+                        <p><strong>Bachelor of Computer Science</strong> - University Name (2016-2020)</p>
+                        <br>
+                        <h3>Certifications</h3>
+                        <ul>
+                            <li>AWS Certified Developer</li>
+                            <li>Google Cloud Professional</li>
+                            <li>React Advanced Certification</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <div class="start-btn">
+                <span>🪟</span> start
+            </div>
+            <div class="taskbar-tasks"></div>
+            <div class="system-tray">
+                <div class="tray-icons">
+                    <div class="tray-icon">
+                        <a href="mailto:your.email@example.com" title="Email">✉️</a>
+                    </div>
+                    <div class="tray-icon">
+                        <a href="https://github.com/yourusername" target="_blank" title="GitHub">🐙</a>
+                    </div>
+                    <div class="tray-icon">
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" title="LinkedIn">💼</a>
+                    </div>
+                </div>
+                <div class="clock" id="clock">12:00 PM</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
