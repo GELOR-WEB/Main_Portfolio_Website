@@ -13,7 +13,7 @@
 <body>
     <!-- Boot Screen -->
     <div id="boot-screen">
-        <div class="xp-logo">Windows <span>XD</span></div>
+        <div class="xp-logo">Windows <span>XP</span></div>
         <div class="loading-bar">
             <div class="loading-progress"></div>
         </div>
@@ -215,29 +215,24 @@
             <div class="window-content">
                 <div class="resume-viewer">
                     <div class="resume-buttons">
-                        <button class="xp-button" onclick="alert('Download functionality would trigger here')">Download Resume</button>
-                        <button class="xp-button" onclick="alert('Print functionality would trigger here')">Print</button>
+                        <button class="xp-button" onclick="downloadResume()">📥 Download Resume</button>
+                        <button class="xp-button" onclick="viewFullscreen()">🔍 View Fullscreen</button>
                     </div>
                     <div class="resume-content">
-                        <h2>Your Name</h2>
-                        <p><strong>Full Stack Developer</strong></p>
-                        <br>
-                        <h3>Experience</h3>
-                        <p><strong>Senior Developer</strong> - Company Name (2022-Present)</p>
-                        <p>Led development of enterprise applications and mentored junior developers.</p>
-                        <br>
-                        <p><strong>Full Stack Developer</strong> - Previous Company (2020-2022)</p>
-                        <p>Developed and maintained multiple client-facing applications.</p>
-                        <br>
-                        <h3>Education</h3>
-                        <p><strong>Bachelor of Computer Science</strong> - University Name (2016-2020)</p>
-                        <br>
-                        <h3>Certifications</h3>
-                        <ul>
-                            <li>AWS Certified Developer</li>
-                            <li>Google Cloud Professional</li>
-                            <li>React Advanced Certification</li>
-                        </ul>
+                        <!-- Replace 'path/to/your/resume.pdf' with your actual PDF URL -->
+                        <iframe 
+                            id="resumePreview"
+                            class="resume-preview" 
+                            src="path/to/your/resume.pdf#toolbar=0&navpanes=0&scrollbar=1"
+                            type="application/pdf">
+                        </iframe>
+                        <!-- Fallback for browsers that don't support PDF preview -->
+                        <div class="pdf-placeholder" style="display: none;" id="pdfFallback">
+                            <div class="pdf-placeholder-icon">📄</div>
+                            <h3>Resume Preview</h3>
+                            <p>Your browser doesn't support PDF preview.</p>
+                            <p>Click the download button above to view the full resume.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -245,7 +240,7 @@
 
         <!-- Taskbar -->
         <div class="taskbar">
-            <div class="start-btn">
+            <div class="start-btn" onclick="toggleStartMenu()">
                 <span>🪟</span> start
             </div>
             <div class="taskbar-tasks"></div>
@@ -262,6 +257,62 @@
                     </div>
                 </div>
                 <div class="clock" id="clock">12:00 PM</div>
+            </div>
+        </div>
+
+        <!-- Start Menu -->
+        <div class="start-menu" id="startMenu">
+            <div class="start-menu-sidebar">
+                Windows <span>XP</span>
+            </div>
+            <div class="start-menu-content">
+                <div class="start-menu-user">
+                    <div class="user-icon">👤</div>
+                    <div>Your Name</div>
+                </div>
+                <div class="start-menu-items">
+                    <div class="menu-item" onclick="openWindow('about'); toggleStartMenu()">
+                        <div class="menu-item-icon">👤</div>
+                        <div>About Me</div>
+                    </div>
+                    <div class="menu-item" onclick="openWindow('tech'); toggleStartMenu()">
+                        <div class="menu-item-icon">💻</div>
+                        <div>Tech Stack</div>
+                    </div>
+                    <div class="menu-item" onclick="openWindow('skills'); toggleStartMenu()">
+                        <div class="menu-item-icon">⚡</div>
+                        <div>Soft Skills</div>
+                    </div>
+                    <div class="menu-item" onclick="openWindow('projects'); toggleStartMenu()">
+                        <div class="menu-item-icon">📁</div>
+                        <div>Projects</div>
+                    </div>
+                    <div class="menu-item" onclick="openWindow('resume'); toggleStartMenu()">
+                        <div class="menu-item-icon">📄</div>
+                        <div>Resume</div>
+                    </div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item" onclick="window.open('https://github.com/yourusername', '_blank')">
+                        <div class="menu-item-icon">🐙</div>
+                        <div>GitHub</div>
+                    </div>
+                    <div class="menu-item" onclick="window.open('https://linkedin.com/in/yourusername', '_blank')">
+                        <div class="menu-item-icon">💼</div>
+                        <div>LinkedIn</div>
+                    </div>
+                    <div class="menu-item" onclick="window.location.href='mailto:your.email@example.com'">
+                        <div class="menu-item-icon">✉️</div>
+                        <div>Email Me</div>
+                    </div>
+                </div>
+                <div class="start-menu-footer">
+                    <div class="footer-btn" onclick="openAllWindows()">
+                        <span>📂</span> All Programs
+                    </div>
+                    <div class="footer-btn" onclick="alert('Thanks for visiting! 👋')">
+                        <span>🔌</span> Log Off
+                    </div>
+                </div>
             </div>
         </div>
     </div>
