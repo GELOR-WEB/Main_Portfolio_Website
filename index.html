@@ -221,20 +221,190 @@
                         <button class="xp-button" onclick="viewFullscreen()">🔍 View Fullscreen</button>
                     </div>
                     <div class="resume-content">
-                        <!-- Replace 'path/to/your/resume.pdf' with your actual PDF URL -->
                         <iframe 
                             id="resumePreview"
                             class="resume-preview" 
                             src="public/DeJesus_Resume.pdf"
                             type="application/pdf">
                         </iframe>
-                        <!-- Fallback for browsers that don't support PDF preview -->
                         <div class="pdf-placeholder" style="display: none;" id="pdfFallback">
                             <div class="pdf-placeholder-icon">📄</div>
                             <h3>Resume Preview</h3>
                             <p>Your browser doesn't support PDF preview.</p>
                             <p>Click the download button above to view the full resume.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chrome Window with 2000s Website -->
+        <div id="chrome" class="window chrome-window">
+            <div class="window-header" onmousedown="dragStart(event, 'chrome')">
+                <div class="window-title">
+                    <div class="window-title-icon"><img src="public/images/chrome.png" style="width: 16px; height: 16px;"></div>
+                    <span>Google Chrome - Gelor's Awesome Portfolio</span>
+                </div>
+                <div class="window-controls">
+                    <div class="window-btn" onclick="closeWindow('chrome')">✕</div>
+                </div>
+            </div>
+            <div class="window-content chrome-content">
+                <div class="browser-bar">
+                    <div class="address-bar">
+                        <span class="protocol">http://</span>
+                        <span class="url">www.gelorsportfolio.com/index.html</span>
+                    </div>
+                </div>
+                <div class="website-2000s">
+                    <div class="header-2000s">
+                        <div class="header-banner">
+                            <marquee behavior="scroll" direction="left" scrollamount="5">
+                                ✨ Welcome to Gelor's AMAZING Portfolio Website! ✨ Last Updated: December 2025 ✨
+                            </marquee>
+                        </div>
+                        <h1 class="title-2000s">
+                            <span class="letter-g">G</span><span class="letter-e">E</span><span class="letter-l">L</span><span class="letter-o">O</span><span class="letter-r">R</span>'s
+                            <br>
+                            <span class="glitter">★彡 PORTFOLIO 彡★</span>
+                        </h1>
+                        <div class="visitor-counter">
+                            <img src="https://stuff.charm.sh/blink.gif" alt="blink"> You are visitor #<span class="counter-num">001337</span>! <img src="https://stuff.charm.sh/blink.gif" alt="blink">
+                        </div>
+                    </div>
+
+                    <div class="content-2000s">
+                        <table width="100%" cellpadding="10" cellspacing="0" border="0">
+                            <tr>
+                                <td width="200" valign="top" bgcolor="#FFE4B5">
+                                    <div class="sidebar-2000s">
+                                        <div class="nav-section">
+                                            <h3>☆ NAVIGATION ☆</h3>
+                                            <div class="nav-links">
+                                                <a href="#about" class="nav-link-2000s">→ About Me</a>
+                                                <a href="#tech" class="nav-link-2000s">→ Tech Stack</a>
+                                                <a href="#skills" class="nav-link-2000s">→ Skills</a>
+                                                <a href="#projects" class="nav-link-2000s">→ Projects</a>
+                                                <a href="#contact" class="nav-link-2000s">→ Contact</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="webring-section">
+                                            <img src="https://anlucas.neocities.org/under_construction.gif" alt="under construction" width="100%">
+                                            <p style="text-align: center; font-size: 10px; margin-top: 5px;">Site best viewed in 1024x768</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td valign="top" bgcolor="#FFFFFF">
+                                    <div class="main-content-2000s">
+                                        <div class="section-2000s" id="about">
+                                            <h2 class="section-title">📋 ABOUT ME 📋</h2>
+                                            <p><b>Hey there, cyber friend!</b> 👋</p>
+                                            <p>I'm a passionate developer who loves creating innovative solutions and beautiful user experiences. I'm all about modern web tech and making apps that actually make a difference!</p>
+                                            <p>When I'm not coding, you'll find me contributing to open-source, reading tech blogs, or trying out new frameworks. Always learning, always growing! 🚀</p>
+                                        </div>
+
+                                        <hr size="2" color="#FF6347">
+
+                                        <div class="section-2000s" id="tech">
+                                            <h2 class="section-title">💻 MY TECH STACK 💻</h2>
+                                            <div class="tech-grid">
+                                                <div class="tech-box">
+                                                    <b>Languages:</b> JavaScript, TypeScript, Python, HTML5, CSS3
+                                                </div>
+                                                <div class="tech-box">
+                                                    <b>Frameworks:</b> React, Vue.js, Angular, Node.js, Express, Django
+                                                </div>
+                                                <div class="tech-box">
+                                                    <b>Styling:</b> Tailwind CSS, Bootstrap, Sass/SCSS
+                                                </div>
+                                                <div class="tech-box">
+                                                    <b>Databases:</b> PostgreSQL, MongoDB, Redis, Firebase
+                                                </div>
+                                                <div class="tech-box">
+                                                    <b>Cloud:</b> AWS, Google Cloud, Docker, Kubernetes
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr size="2" color="#FF6347">
+
+                                        <div class="section-2000s" id="skills">
+                                            <h2 class="section-title">⚡ SOFT SKILLS ⚡</h2>
+                                            <ul class="skills-list">
+                                                <li>💡 <b>Problem Solving</b> - Breaking down complex challenges</li>
+                                                <li>💬 <b>Communication</b> - Clear & effective team player</li>
+                                                <li>🤝 <b>Collaboration</b> - Agile team experience</li>
+                                                <li>⏰ <b>Time Management</b> - Meeting deadlines efficiently</li>
+                                                <li>🔄 <b>Adaptability</b> - Quick learner in dynamic environments</li>
+                                                <li>🎯 <b>Attention to Detail</b> - Quality code & UX focused</li>
+                                            </ul>
+                                        </div>
+
+                                        <hr size="2" color="#FF6347">
+
+                                        <div class="section-2000s" id="projects">
+                                            <h2 class="section-title">📁 MY AWESOME PROJECTS 📁</h2>
+                                            
+                                            <div class="project-box-2000s">
+                                                <h3>🛒 E-Commerce Platform</h3>
+                                                <p><i>React • Node.js • MongoDB • Stripe</i></p>
+                                                <p>Full-stack e-commerce with payments, auth, and admin dashboard!</p>
+                                            </div>
+
+                                            <div class="project-box-2000s">
+                                                <h3>✅ Task Management App</h3>
+                                                <p><i>Vue.js • Firebase • Tailwind CSS</i></p>
+                                                <p>Real-time collaboration with drag-and-drop and notifications!</p>
+                                            </div>
+
+                                            <div class="project-box-2000s">
+                                                <h3>🌤️ Weather Dashboard</h3>
+                                                <p><i>React • OpenWeather API • Chart.js</i></p>
+                                                <p>Beautiful visualizations with location-based forecasts!</p>
+                                            </div>
+
+                                            <div class="project-box-2000s">
+                                                <h3>📝 Portfolio CMS</h3>
+                                                <p><i>Next.js • Sanity.io • TypeScript</i></p>
+                                                <p>Headless CMS portfolio with blog and SEO optimization!</p>
+                                            </div>
+                                        </div>
+
+                                        <hr size="2" color="#FF6347">
+
+                                        <div class="section-2000s" id="contact">
+                                            <h2 class="section-title">📧 GET IN TOUCH 📧</h2>
+                                            <div class="contact-boxes">
+                                                <a href="mailto:dejesusangelor@gmail.com" class="contact-box">
+                                                    <b>✉️ Email Me</b><br>
+                                                    dejesusangelor@gmail.com
+                                                </a>
+                                                <a href="https://github.com/GELOR-WEB" target="_blank" class="contact-box">
+                                                    <b>🐙 GitHub</b><br>
+                                                    @GELOR-WEB
+                                                </a>
+                                                <a href="https://www.linkedin.com/in/angelor-de-jesus" target="_blank" class="contact-box">
+                                                    <b>💼 LinkedIn</b><br>
+                                                    Angelor De Jesus
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="footer-2000s">
+                        <marquee behavior="alternate" scrollamount="3">
+                            ✨ Thanks for visiting! ✨ Best viewed in Internet Explorer 6.0+ ✨ Made with ❤️ in 2025 ✨
+                        </marquee>
+                        <p style="text-align: center; margin-top: 10px;">
+                            © 2025 Gelor's Portfolio | All Rights Reserved | 
+                            <a href="#">Privacy Policy</a> | 
+                            <a href="#">Terms of Service</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -294,15 +464,15 @@
                         <div>Resume</div>
                     </div>
                     <div class="menu-divider"></div>
-                    <div class="menu-item" onclick="window.open('https://github.com/yourusername', '_blank')">
+                    <div class="menu-item" onclick="window.open('https://github.com/GELOR-WEB', '_blank')">
                         <div class="menu-item-icon">🐙</div>
                         <div>GitHub</div>
                     </div>
-                    <div class="menu-item" onclick="window.open('https://linkedin.com/in/yourusername', '_blank')">
+                    <div class="menu-item" onclick="window.open('https://www.linkedin.com/in/angelor-de-jesus', '_blank')">
                         <div class="menu-item-icon">💼</div>
                         <div>LinkedIn</div>
                     </div>
-                    <div class="menu-item" onclick="window.location.href='mailto:your.email@example.com'">
+                    <div class="menu-item" onclick="window.location.href='mailto:dejesusangelor@gmail.com'">
                         <div class="menu-item-icon">✉️</div>
                         <div>Email Me</div>
                     </div>

@@ -3,6 +3,10 @@ setTimeout(() => {
     document.getElementById('boot-screen').classList.add('hidden');
     setTimeout(() => {
         document.getElementById('desktop').classList.add('active');
+        // Automatically open the Chrome window after boot
+        setTimeout(() => {
+            openWindow('chrome');
+        }, 300);
     }, 500);
 }, 3200);
 
@@ -107,8 +111,9 @@ function toggleStartMenu() {
 function openAllWindows() {
     ['about', 'tech', 'skills', 'projects', 'resume'].forEach((id, index) => {
         setTimeout(() => {
+            const win = document.getElementById(id);
             openWindow(id);
-           // Center Resume, position others
+            // Center Resume, position others
             if (id === 'resume') {
                 centerWindow(win);
             } else {
@@ -117,6 +122,7 @@ function openAllWindows() {
             }
         }, index * 100);
     });
+    toggleStartMenu();
 }
 
 // Close start menu when clicking outside
@@ -129,3 +135,22 @@ document.addEventListener('click', (e) => {
         menu.classList.remove('active');
     }
 });
+
+// Resume functions
+function downloadResume() {
+    const link = document.createElement('a');
+    link.href = 'public/DeJesus_Resume.pdf';
+    link.download = 'DeJesus_Resume.pdf';
+    link.click();
+}
+
+function viewFullscreen() {
+    const iframe = document.getElementById('resumePreview');
+    if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+    } else if (iframe.webkitRequestFullscreen) {
+        iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) {
+        iframe.msRequestFullscreen();
+    }
+}
