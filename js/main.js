@@ -19,7 +19,7 @@ function openWindow(id) {
     const win = document.getElementById(id);
     win.classList.add('active');
     bringToFront(win);
-    if (id === 'resume') {
+    if (id === 'resume' || id === 'chrome') {
         centerWindow(win);
     }
 }
