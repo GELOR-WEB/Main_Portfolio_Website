@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop - Gelor's Portfolio</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="../js/main.js"></script>
+    <link rel="icon" href="../public/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Desktop -->
+    <div id="desktop">
+        <div class="desktop-icons">
+            <div class="icon" onclick="openWindow('about')">
+                <div class="icon-img">👤</div>
+                <div class="icon-label">About Me</div>
+            </div>
+            <div class="icon" onclick="openWindow('tech')">
+                <div class="icon-img">💻</div>
+                <div class="icon-label">Tech Stack</div>
+            </div>
+            <div class="icon" onclick="openWindow('skills')">
+                <div class="icon-img">⚡</div>
+                <div class="icon-label">Soft Skills</div>
+            </div>
+            <div class="icon" onclick="openWindow('projects')">
+                <div class="icon-img">📁</div>
+                <div class="icon-label">Projects</div>
+            </div>
+            <div class="icon" onclick="openWindow('resume')">
+                <div class="icon-img">📄</div>
+                <div class="icon-label">Resume</div>
+            </div>
+            <div class="icon" onclick="openWindow('chrome')">
+                <div class="icon-img"><img src="../public/images/chrome.png"></div>
+                <div class="icon-label">Google Chrome</div>
+            </div>
+            <div class="icon" onclick="openWindow('flstudio')">
+                <div class="icon-img"><img src="../public/images/fl.png"></div>
+                <div class="icon-label">FL Studio</div>
+            </div>
+            <div class="icon" onclick="openWindow('Barbershop')">
+                <div class="icon-img"><img src="../public/images/mt.png"></div>
+                <div class="icon-label">Barbershop</div>
+            </div>
+            <div class="icon" onclick="openWindow('Yonex')">
+                <div class="icon-img"><img src="../public/images/ynx.png"></div>
+                <div class="icon-label">Yonex</div>
+            </div>
+        </div>
+
+        <!-- About Me Window -->
+        <div id="about" class="window" style="top: 50px; left: 50px;">
+            <div class="window-header" onmousedown="dragStart(event, 'about')">
+                <div class="window-title">
+                    <div class="window-title-icon">👤</div>
+                    <span>About Me</span>
+                </div>
+                <div class="window-controls">
+                    <div class="window-btn" onclick="closeWindow('about')">✕</div>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>About Me</h2>
+                <p>Hi I'm Gelor! I'm a passionate developer with a love for creating innovative solutions and beautiful user experiences. With expertise in modern web technologies, I strive to build applications that make a difference.</p>
+                <p>I'm constantly learning and exploring new technologies to stay at the forefront of web development. My goal is to create software that is not only functional but also delightful to use.</p>
+                <p>When I'm not coding, you can find me at my small barber's studio✂️, at a badminton court🏸, or at a music studio🎸🎵🎤 𝄞 ♪ ♬ ⚡︎ 𝄞  </p>
+            </div>
+        </div>
+
+        <!-- Tech Stack Window -->
+        <div id="tech" class="window" style="top: 80px; left: 80px;">
+            <div class="window-header" onmousedown="dragStart(event, 'tech')">
+                <div class="window-title">
+                    <div class="window-title-icon">💻</div>
+                    <span>Tech Stack</span>
+                </div>
+                <div class="window-controls">
+                    <div class="window-btn" onclick="closeWindow('tech')">✕</div>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>My Tech Stack</h2>
+                
+                <div class="skill-category">
+                    <h3>Languages & Frameworks</h3>
+                    <ul>
+                        <li>JavaScript (ES6+), TypeScript</li>
+                        <li>React, Vue.js, Angular</li>
+                        <li>Node.js, Express</li>
+                        <li>Python, Django, Flask</li>
+                        <li>HTML5, CSS3</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Styling & Tooling</h3>
+                    <ul>
+                        <li>Tailwind CSS, Bootstrap, Material-UI</li>
+                        <li>Sass/SCSS, CSS Modules</li>
+                        <li>Webpack, Vite, Rollup</li>
+                        <li>Git, GitHub Actions</li>
+                        <li>Jest, Cypress, Testing Library</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Databases & Cloud</h3>
+                    <ul>
+                        <li>PostgreSQL, MySQL, MongoDB</li>
+                        <li>Redis, Firebase</li>
+                        <li>AWS (EC2, S3, Lambda)</li>
+                        <li>Google Cloud Platform</li>
+                        <li>Docker, Kubernetes</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Dev Tools</h3>
+                    <ul>
+                        <li>VS Code, WebStorm</li>
+                        <li>Postman, Insomnia</li>
+                        <li>Chrome DevTools</li>
+                        <li>Figma, Adobe XD</li>
+                        <li>Jira, Trello, Linear</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>APIs & Services</h3>
+                    <ul>
+                        <li>RESTful APIs, GraphQL</li>
+                        <li>WebSocket, Socket.io</li>
+                        <li>OAuth 2.0, JWT</li>
+                        <li>Stripe, PayPal integration</li>
+                        <li>SendGrid, Twilio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soft Skills Window -->
+        <div id="skills" class="window" style="top: 110px; left: 110px;">
+            <div class="window-header" onmousedown="dragStart(event, 'skills')">
+                <div class="window-title">
+                    <div class="window-title-icon">⚡</div>
+                    <span>Soft Skills</span>
+                </div>
+                <div class="window-controls">
+                    <div class="window-btn" onclick="closeWindow('skills')">✕</div>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li><strong>Problem Solving:</strong> Analytical approach to breaking down complex challenges into manageable solutions</li>
+                    <li><strong>Communication:</strong> Clear and effective communication with team members and stakeholders</li>
+                    <li><strong>Collaboration:</strong> Experience working in agile teams and contributing to collective success</li>
+                    <li><strong>Time Management:</strong> Ability to prioritize tasks and meet deadlines efficiently</li>
+                    <li><strong>Adaptability:</strong> Quick learner who thrives in dynamic environments</li>
+                    <li><strong>Attention to Detail:</strong> Meticulous in code quality and user experience</li>
+                    <li><strong>Leadership:</strong> Experience mentoring junior developers and leading technical discussions</li>
+                    <li><strong>Critical Thinking:</strong> Evaluating solutions from multiple perspectives</li>
+                    <li><strong>Creativity:</strong> Innovative approach to design and problem-solving</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projects Window -->
+        <div id="projects" class="window" style="top: 140px; left: 140px;">
+            <div class="window-header" onmousedown="dragStart(event, 'projects')">
+                <div class="window-title">
+                    <div class="window-title-icon">📁</div>
+                    <span>Personal Projects</span>
+                </div>
+                <div class="window-controls">
+                    <div class="window-btn" onclick="closeWindow('projects')">✕</div>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Personal Projects</h2>
+                
+                <div class="project-card">
+                    <h3>Project One - E-Commerce Platform</h3>
+                    <p><strong>Tech:</strong> React, Node.js, MongoDB, Stripe</p>
+                    <p>A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard. Features include product management, shopping cart, and order tracking.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project Two - Task Management App</h3>
+                    <p><strong>Tech:</strong> Vue.js, Firebase, Tailwind CSS</p>
+                    <p>Real-time collaborative task management application with drag-and-drop functionality, team workspaces, and deadline notifications.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project Three - Weather Dashboard</h3>
+                    <p><strong>Tech:</strong> React, OpenWeather API, Chart.js</p>
+                    <p>Interactive weather dashboard displaying current conditions and forecasts with beautiful visualizations and location-based services.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project Four - Portfolio CMS</h3>
+                    <p><strong>Tech:</strong> Next.js, Sanity.io, TypeScript</p>
+                    <p>A headless CMS-powered portfolio website with blog functionality, project showcase, and contact forms. Optimized for SEO and performance.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Window -->
+        <div id="resume" class="window" style="width: 850px; height: 900px;">
+            <div class="window-header" onmousedown="dragStart(event, 'resume')">
+                <div class="window-title">
+                    <div class="window-title-icon">📄</div>
+                    <span>Resume</span>
+                </div>
+                <div class="window-controls">
+                    <div class="window-btn" onclick="closeWindow('resume')">✕</div>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="resume-viewer">
+                    <div class="resume-buttons">
+                        <button class="xp-button" onclick="downloadResume()">📥 Download Resume</button>
+                        <button class="xp-button" onclick="viewFullscreen()">🔍 View Fullscreen</button>
+                    </div>
+                    <div class="resume-content">
+                        <iframe 
+                            id="resumePreview"
+                            class="resume-preview" 
+                            src="../public/DeJesus_Resume.pdf"
+                            type="application/pdf">
+                        </iframe>
+                        <div class="pdf-placeholder" style="display: none;" id="pdfFallback">
+                            <div class="pdf-placeholder-icon">📄</div>
+                            <h3>Resume Preview</h3>
+                            <p>Your browser doesn't support PDF preview.</p>
+                            <p>Click the download button above to view the full resume.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <div class="start-btn" onclick="toggleStartMenu()">
+                <span>🪟</span><i>start</i> 
+            </div>
+            <div class="taskbar-tasks"></div>
+            <div class="system-tray">
+                <div class="tray-icons">
+                    <div class="tray-icon">
+                        <a href="mailto:dejesusangelor@gmail.com" title="Email">✉️</a>
+                    </div>
+                    <div class="tray-icon">
+                        <a href="https://github.com/GELOR-WEB" target="_blank" title="GitHub">🐙</a>
+                    </div>
+                    <div class="tray-icon">
+                        <a href="https://www.linkedin.com/in/angelor-de-jesus" target="_blank" title="LinkedIn">💼</a>
+                    </div>
+                </div>
+                <div class="clock" id="clock">12:00 PM</div>
+            </div>
+        </div>
+
+        <!-- Start Menu -->
+        <div class="start-menu" id="startMenu">
+            <div class="start-menu-sidebar">
+                Windows <span>XD</span>
+            </div>
+            <div class="start-menu-content">
+                <div class="start-menu-user">
+                    <div class="user-icon">👤</div>
+                    <div>Hi I'm Gelor</div>
+                </div>
+                <div class="start-menu-items">
+                    <div class="menu-item" onclick="openWindow('about'); toggleStartMenu()">
+                        <div class="menu-item-icon">👤</div>
+                        <div>About Me</div>
+                    </div>
+                    <div class="menu-item" onclick="openWindow('tech'); toggleStartMenu()">
+                        <div class="menu-item-icon">💻</div>
+                        <div>Tech Stack</div>
+                    </div>
+                    <div class="menu-item" onclick="openWindow('skills'); toggleStartMenu()">
+                        <div class="menu-item-icon">⚡</div>
+                        <div>Soft Skills</div>
+                    </div>
+                    <div class="menu-item" onclick="openWindow('projects'); toggleStartMenu()">
+                        <div class="menu-item-icon">📁</div>
+                        <div>Projects</div>
+                    </div>
+                    <div class="menu-item" onclick="openWindow('resume'); toggleStartMenu()">
+                        <div class="menu-item-icon">📄</div>
+                        <div>Resume</div>
+                    </div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item" onclick="window.open('https://github.com/GELOR-WEB', '_blank')">
+                        <div class="menu-item-icon">🐙</div>
+                        <div>GitHub</div>
+                    </div>
+                    <div class="menu-item" onclick="window.open('https://www.linkedin.com/in/angelor-de-jesus', '_blank')">
+                        <div class="menu-item-icon">💼</div>
+                        <div>LinkedIn</div>
+                    </div>
+                    <div class="menu-item" onclick="window.location.href='mailto:dejesusangelor@gmail.com'">
+                        <div class="menu-item-icon">✉️</div>
+                        <div>Email Me</div>
+                    </div>
+                </div>
+                <div class="start-menu-footer">
+                    <div class="footer-btn" onclick="openAllWindows()">
+                        <span>📂</span> All Programs
+                    </div>
+                    <div class="footer-btn" onclick="alert('Thanks for visiting! 👋')">
+                        <span>🔌</span> Log Off
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
