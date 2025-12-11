@@ -154,3 +154,17 @@ function viewFullscreen() {
         iframe.msRequestFullscreen();
     }
 }
+
+function scrollTo2000sSection(id) {
+    const scrollContainer = document.querySelector('.website-2000s');
+    const targetElement = document.getElementById(id);
+    if (scrollContainer && targetElement) {
+        const targetPosition = targetElement.offsetTop - scrollContainer.offsetTop; 
+        scrollContainer.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    } else {
+        console.warn(`Could not scroll: Target element #${id} or .website-2000s container not found.`);
+    }
+}

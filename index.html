@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <script src="js/main.js"></script>
     <link rel="icon" href="public/images/favicon.png" type="image/x-icon">
 </head>
+
 <body>
     <!-- Boot Screen -->
     <div id="boot-screen" class="windows__bg">
@@ -73,6 +75,10 @@
                 <div class="icon-img"><img src="public/images/ynx.png"></div>
                 <div class="icon-label">Yonex</div>
             </div>
+            <div class="icon" onclick="openWindow('Music')">
+                <div class="icon-img"><img src="public/images/music.png"></div>
+                <div class="icon-label">Music</div>
+            </div>
         </div>
 
         <!-- About Me Window -->
@@ -88,9 +94,13 @@
             </div>
             <div class="window-content">
                 <h2>About Me</h2>
-                <p>Hi I'm Gelor! I'm a passionate developer with a love for creating innovative solutions and beautiful user experiences. With expertise in modern web technologies, I strive to build applications that make a difference.</p>
-                <p>I'm constantly learning and exploring new technologies to stay at the forefront of web development. My goal is to create software that is not only functional but also delightful to use.</p>
-                <p>When I'm not coding, you can find me at my small barber's studio✂️, at a badminton court🏸, or at a music studio🎸🎵🎤 𝄞 ♪ ♬ ⚡︎ 𝄞  </p>
+                <p>Hi I'm Gelor! I'm a passionate developer with a love for creating innovative solutions and beautiful
+                    user experiences. With expertise in modern web technologies, I strive to build applications that
+                    make a difference.</p>
+                <p>I'm constantly learning and exploring new technologies to stay at the forefront of web development.
+                    My goal is to create software that is not only functional but also delightful to use.</p>
+                <p>When I'm not coding, you can find me at my small barber's studio✂️, at a badminton court🏸, or at a
+                    music studio🎸🎵🎤 𝄞 ♪ ♬ ⚡︎ 𝄞 </p>
             </div>
         </div>
 
@@ -107,7 +117,7 @@
             </div>
             <div class="window-content">
                 <h2>My Tech Stack</h2>
-                
+
                 <div class="skill-category">
                     <h3>Languages & Frameworks</h3>
                     <ul>
@@ -171,13 +181,18 @@
             <div class="window-content">
                 <h2>Soft Skills</h2>
                 <ul>
-                    <li><strong>Problem Solving:</strong> Analytical approach to breaking down complex challenges into manageable solutions</li>
-                    <li><strong>Communication:</strong> Clear and effective communication with team members and stakeholders</li>
-                    <li><strong>Collaboration:</strong> Experience working in agile teams and contributing to collective success</li>
-                    <li><strong>Time Management:</strong> Ability to prioritize tasks and meet deadlines efficiently</li>
+                    <li><strong>Problem Solving:</strong> Analytical approach to breaking down complex challenges into
+                        manageable solutions</li>
+                    <li><strong>Communication:</strong> Clear and effective communication with team members and
+                        stakeholders</li>
+                    <li><strong>Collaboration:</strong> Experience working in agile teams and contributing to collective
+                        success</li>
+                    <li><strong>Time Management:</strong> Ability to prioritize tasks and meet deadlines efficiently
+                    </li>
                     <li><strong>Adaptability:</strong> Quick learner who thrives in dynamic environments</li>
                     <li><strong>Attention to Detail:</strong> Meticulous in code quality and user experience</li>
-                    <li><strong>Leadership:</strong> Experience mentoring junior developers and leading technical discussions</li>
+                    <li><strong>Leadership:</strong> Experience mentoring junior developers and leading technical
+                        discussions</li>
                     <li><strong>Critical Thinking:</strong> Evaluating solutions from multiple perspectives</li>
                     <li><strong>Creativity:</strong> Innovative approach to design and problem-solving</li>
                 </ul>
@@ -197,11 +212,12 @@
             </div>
             <div class="window-content">
                 <h2>Personal Projects</h2>
-                
+
                 <div class="project-card">
                     <h3>🛒 Client Management Web App (CRUD)</h3>
                     <p><strong>Tech:</strong> PHP • TailwindCSS • MS SQL</p>
-                    <p>a client manager web app which incorporated basic CRUD functions with added features such as ordering and filtering</p>
+                    <p>a client manager web app which incorporated basic CRUD functions with added features such as
+                        ordering and filtering</p>
                 </div>
 
                 <div class="project-card">
@@ -211,11 +227,13 @@
                 </div>
 
                 <div class="project-card">
-                    <img src="https://anlucas.neocities.org/under_construction.gif" alt="under construction" height="200px" width="100%">
+                    <img src="https://anlucas.neocities.org/under_construction.gif" alt="under construction"
+                        height="200px" width="100%">
                 </div>
 
                 <div class="project-card">
-                    <img src="https://anlucas.neocities.org/under_construction.gif" alt="under construction" height="200px" width="100%">
+                    <img src="https://anlucas.neocities.org/under_construction.gif" alt="under construction"
+                        height="200px" width="100%">
                 </div>
             </div>
         </div>
@@ -238,10 +256,7 @@
                         <button class="xp-button" onclick="viewFullscreen()">🔍 View Fullscreen</button>
                     </div>
                     <div class="resume-content">
-                        <iframe 
-                            id="resumePreview"
-                            class="resume-preview" 
-                            src="public/DeJesus_Resume.pdf"
+                        <iframe id="resumePreview" class="resume-preview" src="public/DeJesus_Resume.pdf"
                             type="application/pdf">
                         </iframe>
                         <div class="pdf-placeholder" style="display: none;" id="pdfFallback">
@@ -255,11 +270,12 @@
             </div>
         </div>
 
-        <!-- Chrome Window with 2000s Website --> 
+        <!-- Chrome Window with 2000s Website -->
         <div id="chrome" class="window chrome-window">
             <div class="window-header" onmousedown="dragStart(event, 'chrome')">
                 <div class="window-title">
-                    <div class="window-title-icon"><img src="public/images/chrome.png" style="width: 16px; height: 16px;"></div>
+                    <div class="window-title-icon"><img src="public/images/chrome.png"
+                            style="width: 16px; height: 16px;"></div>
                     <span>Google Chrome - Gelor's Awesome Portfolio</span>
                 </div>
                 <div class="window-controls">
@@ -281,12 +297,16 @@
                             </marquee>
                         </div>
                         <h1 class="title-2000s">
-                            <span class="letter-g">G</span><span class="letter-e">E</span><span class="letter-l">L</span><span class="letter-o">O</span><span class="letter-r">R</span>'s
+                            <span class="letter-g">G</span><span class="letter-e">E</span><span
+                                class="letter-l">L</span><span class="letter-o">O</span><span
+                                class="letter-r">R</span>'s
                             <br>
                             <span class="glitter">★彡 PORTFOLIO 彡★</span>
                         </h1>
                         <div class="visitor-counter">
-                            <img src="https://stuff.charm.sh/blink.gif" alt="blink"> You are visitor #<span class="counter-num">001337</span>! <img src="https://stuff.charm.sh/blink.gif" alt="blink">
+                            <img src="https://stuff.charm.sh/blink.gif" alt="blink"> You are visitor #<span
+                                class="counter-num">001337</span>! <img src="https://stuff.charm.sh/blink.gif"
+                                alt="blink">
                         </div>
                     </div>
 
@@ -298,208 +318,230 @@
                                         <div class="nav-section">
                                             <h3>☆ NAVIGATION ☆</h3>
                                             <div class="nav-links">
-                                                <a href="#about" class="nav-link-2000s">→ About Me</a>
-                                                <a href="#tech" class="nav-link-2000s">→ Tech Stack</a>
-                                                <a href="#skills" class="nav-link-2000s">→ Skills</a>
-                                                <a href="#projects" class="nav-link-2000s">→ Projects</a>
-                                                <a href="#contact" class="nav-link-2000s">→ Contact</a>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="webring-section">
-                                            <img src="https://anlucas.neocities.org/under_construction.gif" alt="under construction" width="100%">
-                                            <p style="text-align: center; font-size: 10px; margin-top: 5px;">Site best viewed in 1024x768</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td valign="top" bgcolor="#FFFFFF">
-                                    <div class="main-content-2000s">
-                                        <div class="section-2000s" id="about">
-                                            <h2 class="section-title">📋 ABOUT ME 📋</h2>
-                                            <p><b>Hey!, I'm Angelor</b> 👋</p>
-                                            <p><b>DON'T LET MY PORTFOLIO FOOL YOU!</b> I'm a passionate developer who loves creating innovative solutions and beautiful user experiences. I'm all about modern web tech and making apps that actually make a difference!</p>
-                                            <p>When I'm not coding, you can find me at my small barber's studio✂️, at a badminton court🏸, or at a music studio🎸🎵🎤 𝄞 ♪ ♬ ⚡︎ 𝄞 </p>
-                                        </div>
-
-                                        <hr size="2" color="#FF6347">
-
-                                        <div class="section-2000s" id="tech">
-                                            <h2 class="section-title">💻 MY TECH STACK 💻</h2>
-                                            <div class="tech-grid">
-                                                <div class="tech-box">
-                                                    <b>Languages:</b> Java, JavaScript, Php, TypeScript, Python
-                                                </div>
-                                                <div class="tech-box">
-                                                    <b>Frameworks:</b> React, Vue.js, Angular, Node.js, Express, Django
-                                                </div>
-                                                <div class="tech-box">
-                                                    <b>Styling:</b> Tailwind CSS, Bootstrap
-                                                </div>
-                                                <div class="tech-box">
-                                                    <b>Databases:</b> PostgreSQL, MongoDB
-                                                </div>
-                                                <div class="tech-box">
-                                                    <b>Cloud:</b> AWS, Docker
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <hr size="2" color="#FF6347">
-
-                                        <div class="section-2000s" id="skills">
-                                            <h2 class="section-title">⚡ SOFT SKILLS ⚡</h2>
-                                            <ul class="skills-list">
-                                                <li>💡 <b>Problem Solving</b> - Breaking down complex challenges</li>
-                                                <li>💬 <b>Communication</b> - Clear & effective team player</li>
-                                                <li>🤝 <b>Collaboration</b> - Agile team experience</li>
-                                                <li>⏰ <b>Time Management</b> - Meeting deadlines efficiently</li>
-                                                <li>🔄 <b>Adaptability</b> - Quick learner in dynamic environments</li>
-                                                <li>🎯 <b>Attention to Detail</b> - Quality code & UI/UX focused</li>
-                                            </ul>
-                                        </div>
-
-                                        <hr size="2" color="#FF6347">
-
-                                        <div class="section-2000s" id="projects">
-                                            <h2 class="section-title">📁 MY AWESOME PROJECTS 📁</h2>
-                                            
-                                            <div class="project-box-2000s">
-                                                <h3>👤📝 Client Management Web App (CRUD)</h3>
-                                                <p><i>Vanilla PHP • TailwindCSS • MS SQL</i></p>
-                                                <p>a client manager web app which incorporated basic CRUD functions with added features such as ordering and filtering</p>
-                                            </div>
-
-                                            <div class="project-box-2000s">
-                                                <h3>✂️ Barbershop Booking App</h3>
-                                                <p><i>React.js • MongoDB • AWS</i></p>
-                                                <p>A full-stack Barbershop booking web application</p>
-                                            </div>
-
-                                            <div class="project-box-2000s">
-                                                <img src="https://anlucas.neocities.org/under_construction.gif" alt="under construction" height="200px" width="100%">
-                                            </div>
-
-                                            <div class="project-box-2000s">
-                                                <img src="https://anlucas.neocities.org/under_construction.gif" alt="under construction" height="200px" width="100%">
-                                            </div>
-                                        </div>
-
-                                        <hr size="2" color="#FF6347">
-
-                                        <div class="section-2000s" id="contact">
-                                            <h2 class="section-title">📧 GET IN TOUCH 📧</h2>
-                                            <div class="contact-boxes">
-                                                <a href="mailto:dejesusangelor@gmail.com" class="contact-box">
-                                                    <b>✉️ Email Me</b><br>
-                                                    dejesusangelor@gmail.com
-                                                </a>
-                                                <a href="https://github.com/GELOR-WEB" target="_blank" class="contact-box">
-                                                    <b>🐙 GitHub</b><br>
-                                                    @GELOR-WEB
-                                                </a>
-                                                <a href="https://www.linkedin.com/in/angelor-de-jesus" target="_blank" class="contact-box">
-                                                    <b>💼 LinkedIn</b><br>
-                                                    Angelor De Jesus
-                                                </a>
+                                                <a href="#about-2000s"
+                                                    onclick="event.preventDefault(); scrollTo2000sSection('about-2000s');"
+                                                    class="nav-link-2000s">→ About Me</a>
+                                                <a href="#tech-2000s"
+                                                    onclick="event.preventDefault(); scrollTo2000sSection('tech-2000s');"
+                                                    class="nav-link-2000s">→ Tech Stack</a>
+                                                <a href="#skills-2000s"
+                                                    onclick="event.preventDefault(); scrollTo2000sSection('skills-2000s');"
+                                                    class="nav-link-2000s">→ Skills</a>
+                                                <a href="#projects-2000s"
+                                                    onclick="event.preventDefault(); scrollTo2000sSection('projects-2000s');"
+                                                    class="nav-link-2000s">→ Projects</a>
+                                                <a href="#contact-2000s"
+                                                    onclick="event.preventDefault(); scrollTo2000sSection('contact-2000s');"
+                                                    class="nav-link-2000s">→ Contact</a>
                                             </div>
                                         </div>
                                     </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
 
-                    <div class="footer-2000s">
-                        <marquee behavior="alternate" scrollamount="3">
-                            ✨ Thanks for visiting! ✨ Best viewed in Internet Explorer 6.0+ ✨ Made with ❤️ in 2025 ✨
-                        </marquee>
-                        <p style="text-align: center; margin-top: 10px;">
-                            © 2025 Gelor's Portfolio | All Rights Reserved | 
-                            <a href="#">Privacy Policy</a> | 
-                            <a href="#">Terms of Service</a>
-                        </p>
+                                    <div class="webring-section">
+                                        <img src="https://anlucas.neocities.org/under_construction.gif"
+                                            alt="under construction" width="100%">
+                                        <p style="text-align: center; font-size: 10px; margin-top: 5px;">Site best
+                                            viewed in 1024x768</p>
+                                    </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                    </td>
+                    <td valign="top" bgcolor="#FFFFFF">
+                        <div class="main-content-2000s">
+                            <div class="section-2000s" id="about-2000s">
+                                <h2 class="section-title">📋 ABOUT ME 📋</h2>
+                                <p><b>Hey!, I'm Angelor</b> 👋</p>
+                                <p><b>DON'T LET MY PORTFOLIO FOOL YOU!</b> I'm a passionate developer who
+                                    loves creating innovative solutions and beautiful user experiences. I'm
+                                    all about modern web tech and making apps that actually make a
+                                    difference!</p>
+                                <p>When I'm not coding, you can find me at my small barber's studio✂️, at a
+                                    badminton court🏸, or at a music studio🎸🎵🎤 𝄞 ♪ ♬ ⚡︎ 𝄞 </p>
+                            </div>
 
-        <!-- Taskbar -->
-        <div class="taskbar">
-            <div class="start-btn" onclick="toggleStartMenu()">
-                <span>🪟</span><i>start</i> 
-            </div>
-            <div class="taskbar-tasks"></div>
-            <div class="system-tray">
-                <div class="tray-icons">
-                    <div class="tray-icon">
-                        <a href="mailto:dejesusangelor@gmail.com" title="Email">✉️</a>
-                    </div>
-                    <div class="tray-icon">
-                        <a href="https://github.com/GELOR-WEB" target="_blank" title="GitHub">🐙</a>
-                    </div>
-                    <div class="tray-icon">
-                        <a href="https://www.linkedin.com/in/angelor-de-jesus" target="_blank" title="LinkedIn">💼</a>
-                    </div>
-                </div>
-                <div class="clock" id="clock">12:00 PM</div>
-            </div>
-        </div>
+                            <hr size="2" color="#FF6347">
 
-        <!-- Start Menu -->
-        <div class="start-menu" id="startMenu">
-            <div class="start-menu-sidebar">
-                Windows <span>XD</span>
-            </div>
-            <div class="start-menu-content">
-                <div class="start-menu-user">
-                    <div class="user-icon">👤</div>
-                    <div>Hi I'm Gelor</div>
+                            <div class="section-2000s" id="tech-2000s">
+                                <h2 class="section-title">💻 MY TECH STACK 💻</h2>
+                                <div class="tech-grid">
+                                    <div class="tech-box">
+                                        <b>Languages:</b> Java, JavaScript, Php, TypeScript, Python
+                                    </div>
+                                    <div class="tech-box">
+                                        <b>Frameworks:</b> React, Vue.js, Angular, Node.js, Express, Django
+                                    </div>
+                                    <div class="tech-box">
+                                        <b>Styling:</b> Tailwind CSS, Bootstrap
+                                    </div>
+                                    <div class="tech-box">
+                                        <b>Databases:</b> PostgreSQL, MongoDB
+                                    </div>
+                                    <div class="tech-box">
+                                        <b>Cloud:</b> AWS, Docker
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr size="2" color="#FF6347">
+
+                            <div class="section-2000s" id="skills-2000s">
+                                <h2 class="section-title">⚡ SOFT SKILLS ⚡</h2>
+                                <ul class="skills-list">
+                                    <li>💡 <b>Problem Solving</b> - Breaking down complex challenges</li>
+                                    <li>💬 <b>Communication</b> - Clear & effective team player</li>
+                                    <li>🤝 <b>Collaboration</b> - Agile team experience</li>
+                                    <li>⏰ <b>Time Management</b> - Meeting deadlines efficiently</li>
+                                    <li>🔄 <b>Adaptability</b> - Quick learner in dynamic environments</li>
+                                    <li>🎯 <b>Attention to Detail</b> - Quality code & UI/UX focused</li>
+                                </ul>
+                            </div>
+
+                            <hr size="2" color="#FF6347">
+
+                            <div class="section-2000s" id="projects-2000s">
+                                <h2 class="section-title">📁 MY AWESOME PROJECTS 📁</h2>
+
+                                <div class="project-box-2000s">
+                                    <h3>👤📝 Client Management Web App (CRUD)</h3>
+                                    <p><i>Vanilla PHP • TailwindCSS • MS SQL</i></p>
+                                    <p>a client manager web app which incorporated basic CRUD functions with
+                                        added features such as ordering and filtering</p>
+                                </div>
+
+                                <div class="project-box-2000s">
+                                    <h3>✂️ Barbershop Booking App</h3>
+                                    <p><i>React.js • MongoDB • AWS</i></p>
+                                    <p>A full-stack Barbershop booking web application</p>
+                                </div>
+
+                                <div class="project-box-2000s">
+                                    <img src="https://anlucas.neocities.org/under_construction.gif"
+                                        alt="under construction" height="200px" width="100%">
+                                </div>
+
+                                <div class="project-box-2000s">
+                                    <img src="https://anlucas.neocities.org/under_construction.gif"
+                                        alt="under construction" height="200px" width="100%">
+                                </div>
+                            </div>
+
+                            <hr size="2" color="#FF6347">
+
+                            <div class="section-2000s" id="contact-2000s">
+                                <h2 class="section-title">📧 GET IN TOUCH 📧</h2>
+                                <div class="contact-boxes">
+                                    <a href="mailto:dejesusangelor@gmail.com" class="contact-box">
+                                        <b>✉️ Email Me</b><br>
+                                        dejesusangelor@gmail.com
+                                    </a>
+                                    <a href="https://github.com/GELOR-WEB" target="_blank" class="contact-box">
+                                        <b>🐙 GitHub</b><br>
+                                        @GELOR-WEB
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/angelor-de-jesus" target="_blank"
+                                        class="contact-box">
+                                        <b>💼 LinkedIn</b><br>
+                                        Angelor De Jesus
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    </tr>
+                    </table>
                 </div>
-                <div class="start-menu-items">
-                    <div class="menu-item" onclick="openWindow('about'); toggleStartMenu()">
-                        <div class="menu-item-icon">👤</div>
-                        <div>About Me</div>
-                    </div>
-                    <div class="menu-item" onclick="openWindow('tech'); toggleStartMenu()">
-                        <div class="menu-item-icon">💻</div>
-                        <div>Tech Stack</div>
-                    </div>
-                    <div class="menu-item" onclick="openWindow('skills'); toggleStartMenu()">
-                        <div class="menu-item-icon">⚡</div>
-                        <div>Soft Skills</div>
-                    </div>
-                    <div class="menu-item" onclick="openWindow('projects'); toggleStartMenu()">
-                        <div class="menu-item-icon">📁</div>
-                        <div>Projects</div>
-                    </div>
-                    <div class="menu-item" onclick="openWindow('resume'); toggleStartMenu()">
-                        <div class="menu-item-icon">📄</div>
-                        <div>Resume</div>
-                    </div>
-                    <div class="menu-divider"></div>
-                    <div class="menu-item" onclick="window.open('https://github.com/GELOR-WEB', '_blank')">
-                        <div class="menu-item-icon">🐙</div>
-                        <div>GitHub</div>
-                    </div>
-                    <div class="menu-item" onclick="window.open('https://www.linkedin.com/in/angelor-de-jesus', '_blank')">
-                        <div class="menu-item-icon">💼</div>
-                        <div>LinkedIn</div>
-                    </div>
-                    <div class="menu-item" onclick="window.location.href='mailto:dejesusangelor@gmail.com'">
-                        <div class="menu-item-icon">✉️</div>
-                        <div>Email Me</div>
-                    </div>
-                </div>
-                <div class="start-menu-footer">
-                    <div class="footer-btn" onclick="openAllWindows()">
-                        <span>📂</span> All Programs
-                    </div>
-                    <div class="footer-btn" onclick="alert('Thanks for visiting! 👋')">
-                        <span>🔌</span> Log Off
-                    </div>
+
+                <div class="footer-2000s">
+                    <marquee behavior="alternate" scrollamount="3">
+                        ✨ Thanks for visiting! ✨ Best viewed in Internet Explorer 6.0+ ✨ Made with ❤️ in 2025 ✨
+                    </marquee>
+                    <p style="text-align: center; margin-top: 10px;">
+                        © 2025 Gelor's Portfolio | All Rights Reserved |
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Terms of Service</a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="start-btn" onclick="toggleStartMenu()">
+            <span>🪟</span><i>start</i>
+        </div>
+        <div class="taskbar-tasks"></div>
+        <div class="system-tray">
+            <div class="tray-icons">
+                <div class="tray-icon">
+                    <a href="mailto:dejesusangelor@gmail.com" title="Email">✉️</a>
+                </div>
+                <div class="tray-icon">
+                    <a href="https://github.com/GELOR-WEB" target="_blank" title="GitHub">🐙</a>
+                </div>
+                <div class="tray-icon">
+                    <a href="https://www.linkedin.com/in/angelor-de-jesus" target="_blank" title="LinkedIn">💼</a>
+                </div>
+            </div>
+            <div class="clock" id="clock">12:00 PM</div>
+        </div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu" id="startMenu">
+        <div class="start-menu-sidebar">
+            Windows <span>XD</span>
+        </div>
+        <div class="start-menu-content">
+            <div class="start-menu-user">
+                <div class="user-icon">👤</div>
+                <div>Hi I'm Gelor</div>
+            </div>
+            <div class="start-menu-items">
+                <div class="menu-item" onclick="openWindow('about'); toggleStartMenu()">
+                    <div class="menu-item-icon">👤</div>
+                    <div>About Me</div>
+                </div>
+                <div class="menu-item" onclick="openWindow('tech'); toggleStartMenu()">
+                    <div class="menu-item-icon">💻</div>
+                    <div>Tech Stack</div>
+                </div>
+                <div class="menu-item" onclick="openWindow('skills'); toggleStartMenu()">
+                    <div class="menu-item-icon">⚡</div>
+                    <div>Soft Skills</div>
+                </div>
+                <div class="menu-item" onclick="openWindow('projects'); toggleStartMenu()">
+                    <div class="menu-item-icon">📁</div>
+                    <div>Projects</div>
+                </div>
+                <div class="menu-item" onclick="openWindow('resume'); toggleStartMenu()">
+                    <div class="menu-item-icon">📄</div>
+                    <div>Resume</div>
+                </div>
+                <div class="menu-divider"></div>
+                <div class="menu-item" onclick="window.open('https://github.com/GELOR-WEB', '_blank')">
+                    <div class="menu-item-icon">🐙</div>
+                    <div>GitHub</div>
+                </div>
+                <div class="menu-item" onclick="window.open('https://www.linkedin.com/in/angelor-de-jesus', '_blank')">
+                    <div class="menu-item-icon">💼</div>
+                    <div>LinkedIn</div>
+                </div>
+                <div class="menu-item" onclick="window.location.href='mailto:dejesusangelor@gmail.com'">
+                    <div class="menu-item-icon">✉️</div>
+                    <div>Email Me</div>
+                </div>
+            </div>
+            <div class="start-menu-footer">
+                <div class="footer-btn" onclick="openAllWindows()">
+                    <span>📂</span> All Programs
+                </div>
+                <div class="footer-btn" onclick="alert('Thanks for visiting! 👋')">
+                    <span>🔌</span> Log Off
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
+
 </html>
