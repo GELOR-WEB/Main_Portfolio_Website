@@ -781,6 +781,11 @@ body {
     color: #ff0000;
 }
 
+.header-banner marquee {
+    white-space: nowrap;
+    width: 100%; 
+}
+
 .title-2000s {
     color: #fff;
     text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
