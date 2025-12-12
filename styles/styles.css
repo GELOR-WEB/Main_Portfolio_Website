@@ -599,7 +599,74 @@ body {
     display: flex;
     gap: 10px;
 }
+.xp-button-2000s {
+    /* Base Windows XP/2000 Button Style */
+    padding: 8px 15px;
+    text-decoration: none;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    display: inline-flex; /* Use flex for icon alignment */
+    align-items: center;
+    gap: 5px;
+    border: 1px solid;
+    border-radius: 3px;
+    
+    /* Default (Unpressed) Look */
+    background: linear-gradient(180deg, #f0f0f0 0%, #c0c0c0 100%);
+    color: #000;
+    border-color: #fff #000 #000 #fff;
+    box-shadow: 1px 1px 0 #000; /* Subtle shadow for depth */
+}
 
+/* Hover Effect - Change background slightly */
+.xp-button-2000s:hover {
+    background: linear-gradient(180deg, #fff 0%, #d0d0d0 100%);
+    /* Add a slight scale for retro emphasis */
+    transform: scale(1.02);
+}
+
+/* Active/Pressed Effect - Simulates being clicked down */
+.xp-button-2000s:active {
+    border-color: #000 #fff #fff #000;
+    background: #d0d0d0; /* Flat, sunken look */
+    box-shadow: none;
+    transform: translate(1px, 1px); /* Move 1px down and right to match sunken border */
+}
+
+/* Custom styles for the demo button */
+.demo-btn {
+    background: linear-gradient(180deg, #ffc107 0%, #ff8c00 100%); /* Orange/Gold color */
+    color: #8b4513; /* Brown/Dark Text */
+    border-color: #fff #8b4513 #8b4513 #fff;
+}
+
+.demo-btn:hover {
+    background: linear-gradient(180deg, #ffe082 0%, #ffb74d 100%);
+}
+
+.demo-btn:active {
+    border-color: #8b4513 #fff #fff #8b4513;
+    background: #ffb74d;
+}
+
+/* Custom styles for the GitHub button */
+.github-btn {
+    background: linear-gradient(180deg, #2ecc71 0%, #27ae60 100%); /* Green color */
+    color: #fff;
+    border-color: #fff #1e8449 #1e8449 #fff;
+}
+
+.github-btn:hover {
+    background: linear-gradient(180deg, #58d68d 0%, #48c9b0 100%);
+}
+
+.github-btn:active {
+    border-color: #1e8449 #fff #fff #1e8449;
+    background: #27ae60;
+}
 .xp-button {
     padding: 8px 16px;
     background: linear-gradient(180deg, #f0f0f0 0%, #c0c0c0 100%);
@@ -647,7 +714,7 @@ body {
 
 .pdf-placeholder-icon {
     font-size: 64px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
 }
 
 /* Chrome Window & 2000s Website */
@@ -872,7 +939,12 @@ body {
     margin-bottom: 8px;
     font-size: 14px;
 }
-
+.project-links-2000s {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap; 
+}
 .project-box-2000s {
     background: #fff;
     border: 3px solid #4169e1;
