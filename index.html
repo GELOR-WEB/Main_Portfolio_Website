@@ -298,7 +298,7 @@
                     <div class="header-2000s">
                         <div class="header-banner">
                             <marquee behavior="scroll" direction="left" scrollamount="5">
-                                ✨ Welcome to Gelor's AMAZING Portfolio Website! ✨ Last Updated: December 2025 ✨
+                                ✨ Welcome to Gelor's AMAZING Portfolio Website! ✨ Last Updated: February 2026 ✨
                             </marquee>
                         </div>
                         <h1 class="title-2000s">
@@ -514,6 +514,205 @@
             </div>
         </div>
     </div>
+
+    <!-- Windows Media Player Window -->
+    <div id="Music" class="window wmp-window" style="top: 80px; left: 100px;">
+        <div class="window-header wmp-header" onmousedown="dragStart(event, 'Music')">
+            <div class="window-title">
+                <div class="window-title-icon"><img src="public/images/music.png" style="width: 16px; height: 16px;">
+                </div>
+                <span>Windows Media Player</span>
+            </div>
+            <div class="window-controls">
+                <div class="window-btn" onclick="closeWindow('Music')">✕</div>
+            </div>
+        </div>
+
+        <!-- WMP Menu Bar -->
+        <div class="wmp-menubar">
+            <span class="wmp-menu-item">File</span>
+            <span class="wmp-menu-item">View</span>
+            <span class="wmp-menu-item">Play</span>
+            <span class="wmp-menu-item">Tools</span>
+            <span class="wmp-menu-item">Help</span>
+        </div>
+
+        <div class="wmp-main-content">
+            <!-- Left Sidebar -->
+            <div class="wmp-sidebar">
+                <div class="wmp-sidebar-item active">
+                    <span class="wmp-sidebar-icon">▶</span>
+                    <div>Now<br>Playing</div>
+                </div>
+                <div class="wmp-sidebar-item">
+                    <span class="wmp-sidebar-icon">📰</span>
+                    <div>Media<br>Guide</div>
+                </div>
+                <div class="wmp-sidebar-item">
+                    <span class="wmp-sidebar-icon">💿</span>
+                    <div>Copy from<br>CD</div>
+                </div>
+                <div class="wmp-sidebar-item">
+                    <span class="wmp-sidebar-icon">📚</span>
+                    <div>Media<br>Library</div>
+                </div>
+                <div class="wmp-sidebar-item">
+                    <span class="wmp-sidebar-icon">📻</span>
+                    <div>Radio<br>Tuner</div>
+                </div>
+                <div class="wmp-sidebar-item">
+                    <span class="wmp-sidebar-icon">💾</span>
+                    <div>Copy to CD<br>or Device</div>
+                </div>
+                <div class="wmp-sidebar-item">
+                    <span class="wmp-sidebar-icon">⭐</span>
+                    <div>Premium<br>Services</div>
+                </div>
+                <div class="wmp-sidebar-item">
+                    <span class="wmp-sidebar-icon">🎨</span>
+                    <div>Skin<br>Chooser</div>
+                </div>
+            </div>
+
+            <!-- Main Area -->
+            <div class="wmp-center">
+                <!-- Now Playing Title -->
+                <div class="wmp-now-playing-title" id="wmpNowPlayingTitle">
+                    No track selected
+                </div>
+
+                <!-- Visualization Area -->
+                <div class="wmp-visualization" id="wmpVisualization">
+                    <div class="wmp-vis-canvas" id="wmpVisCanvas">
+                        <div class="wmp-vis-bars">
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                            <div class="wmp-bar"></div>
+                        </div>
+                        <div class="wmp-play-icon" id="wmpPlayIcon">▶</div>
+                    </div>
+                </div>
+
+                <!-- Status Bar -->
+                <div class="wmp-status-bar">
+                    <div class="wmp-status-left">
+                        <span class="wmp-btn-small">🔀</span>
+                        <span class="wmp-btn-small">🔁</span>
+                        <span>Alchemy : Random</span>
+                    </div>
+                    <div class="wmp-status-right">
+                        <span class="wmp-btn-small">⏹</span>
+                        <span class="wmp-btn-small">🔲</span>
+                        <span class="wmp-btn-small">📺</span>
+                        <span>Total Time: <span id="wmpTotalTime">0:00</span></span>
+                    </div>
+                </div>
+
+                <!-- Seek Bar Area -->
+                <div class="wmp-seek-area">
+                    <div class="wmp-playing-status">
+                        <span id="wmpPlayingStatus">Stopped</span>
+                    </div>
+                    <div class="wmp-time-display">
+                        <span id="wmpCurrentTime">0:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel - Playlist -->
+            <div class="wmp-right-panel">
+                <div class="wmp-right-header">
+                    <span>⊙ Now Playing</span>
+                    <span class="wmp-dropdown">▼</span>
+                </div>
+
+                <div class="wmp-album-art">
+                    <div class="wmp-album-icon">🎵</div>
+                    <div class="wmp-album-text">Find Album Info</div>
+                </div>
+
+                <div class="wmp-playlist" id="wmpPlaylist">
+                    <div class="wmp-playlist-item"
+                        data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                        onclick="selectTrack(this)">
+                        <span class="wmp-track-name">Chill_Vibes_001</span>
+                        <span class="wmp-track-duration">3:45</span>
+                    </div>
+                    <div class="wmp-playlist-item"
+                        data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+                        onclick="selectTrack(this)">
+                        <span class="wmp-track-name">Summer_Beat_002</span>
+                        <span class="wmp-track-duration">4:12</span>
+                    </div>
+                    <div class="wmp-playlist-item"
+                        data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+                        onclick="selectTrack(this)">
+                        <span class="wmp-track-name">Retro_Wave_003</span>
+                        <span class="wmp-track-duration">3:28</span>
+                    </div>
+                    <div class="wmp-playlist-item"
+                        data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+                        onclick="selectTrack(this)">
+                        <span class="wmp-track-name">Synth_Dream_004</span>
+                        <span class="wmp-track-duration">5:01</span>
+                    </div>
+                    <div class="wmp-playlist-item"
+                        data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+                        onclick="selectTrack(this)">
+                        <span class="wmp-track-name">Night_Drive_005</span>
+                        <span class="wmp-track-duration">4:33</span>
+                    </div>
+                    <div class="wmp-playlist-item"
+                        data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"
+                        onclick="selectTrack(this)">
+                        <span class="wmp-track-name">Ambient_Flow_006</span>
+                        <span class="wmp-track-duration">6:15</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Playback Controls -->
+        <div class="wmp-controls">
+            <div class="wmp-controls-left">
+                <button class="wmp-control-btn" id="wmpPlayBtn" onclick="togglePlay()">
+                    <span id="wmpPlayPauseIcon">▶</span>
+                </button>
+                <button class="wmp-control-btn" onclick="stopPlayback()">■</button>
+                <button class="wmp-control-btn" onclick="prevTrack()">⏮</button>
+                <button class="wmp-control-btn" onclick="nextTrack()">⏭</button>
+            </div>
+            <div class="wmp-seek-container">
+                <input type="range" class="wmp-seek-bar" id="wmpSeekBar" min="0" max="100" value="0"
+                    onchange="seekTo(this.value)">
+            </div>
+            <div class="wmp-controls-right">
+                <span class="wmp-mute-btn" onclick="toggleMute()">🔊</span>
+                <input type="range" class="wmp-volume-bar" id="wmpVolumeBar" min="0" max="100" value="50"
+                    onchange="setVolume(this.value)">
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Audio Element -->
+    <audio id="wmpAudio"></audio>
 
     <!-- Taskbar -->
     <div class="taskbar">
