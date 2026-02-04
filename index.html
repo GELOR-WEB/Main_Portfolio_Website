@@ -67,7 +67,7 @@
                 <div class="icon-img"><img src="public/images/fl.png"></div>
                 <div class="icon-label">FL Studio</div>
             </div>
-            <div class="icon" onclick="openWindow('Barbershop')">
+            <div class="icon" onclick="window.open('https://anlucas.neocities.org/under_construction.gif', '_blank')">
                 <div class="icon-img"><img src="public/images/mt.png"></div>
                 <div class="icon-label">Barbershop</div>
             </div>
@@ -511,6 +511,59 @@
                         <a href="#">Terms of Service</a>
                     </p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Yonex Video Viewer Window -->
+    <div id="Yonex" class="window yonex-window" style="top: 100px; left: 100px;">
+        <div class="window-header" onmousedown="dragStart(event, 'Yonex')">
+            <div class="window-title">
+                <div class="window-title-icon"><img src="public/images/ynx.png" style="width: 16px; height: 16px;">
+                </div>
+                <span>Yonex Video Gallery</span>
+            </div>
+            <div class="window-controls">
+                <div class="window-btn" onclick="closeWindow('Yonex')">✕</div>
+            </div>
+        </div>
+        <div class="window-content yonex-content">
+            <div class="yonex-video-container">
+                <video id="yonexVideo" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="yonex-controls">
+                <button class="xp-button yonex-nav-btn" onclick="yonexPrevVideo()">◀ Previous</button>
+                <span class="yonex-video-counter" id="yonexCounter">Video 1 of 3</span>
+                <button class="xp-button yonex-nav-btn" onclick="yonexNextVideo()">Next ▶</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FL Studio Video Viewer Window -->
+    <div id="flstudio" class="window flstudio-window" style="top: 100px; left: 100px;">
+        <div class="window-header" onmousedown="dragStart(event, 'flstudio')">
+            <div class="window-title">
+                <div class="window-title-icon"><img src="public/images/fl.png" style="width: 16px; height: 16px;"></div>
+                <span>FL Studio Video Gallery</span>
+            </div>
+            <div class="window-controls">
+                <div class="window-btn" onclick="closeWindow('flstudio')">✕</div>
+            </div>
+        </div>
+        <div class="window-content flstudio-content">
+            <div class="flstudio-video-container">
+                <video id="flstudioVideo" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="flstudio-controls">
+                <button class="xp-button flstudio-nav-btn" onclick="flstudioPrevVideo()">◀ Previous</button>
+                <span class="flstudio-video-counter" id="flstudioCounter">Video 1 of 3</span>
+                <button class="xp-button flstudio-nav-btn" onclick="flstudioNextVideo()">Next ▶</button>
             </div>
         </div>
     </div>

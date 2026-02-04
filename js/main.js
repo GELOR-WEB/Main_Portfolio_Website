@@ -19,7 +19,7 @@ function openWindow(id) {
     const win = document.getElementById(id);
     win.classList.add('active');
     bringToFront(win);
-    if (id === 'resume' || id === 'chrome' || id === 'Music') {
+    if (id === 'resume' || id === 'chrome' || id === 'Music' || id === 'Yonex' || id === 'flstudio') {
         centerWindow(win);
     }
 }
@@ -351,4 +351,76 @@ function updateMuteIcon() {
     } else {
         muteBtn.textContent = '🔊';
     }
+}
+
+// ============================================
+// Yonex Video Viewer Functions
+// ============================================
+
+// Placeholder videos - replace with your actual video sources
+let yonexVideos = [
+    { src: 'https://www.w3schools.com/html/mov_bbb.mp4', title: 'Sample Video 1' },
+    { src: 'https://www.w3schools.com/html/movie.mp4', title: 'Sample Video 2' },
+    { src: 'https://www.w3schools.com/html/mov_bbb.mp4', title: 'Sample Video 3' }
+];
+let yonexCurrentIndex = 0;
+
+function yonexLoadVideo() {
+    const video = document.getElementById('yonexVideo');
+    const counter = document.getElementById('yonexCounter');
+    if (video && counter && yonexVideos.length > 0) {
+        video.src = yonexVideos[yonexCurrentIndex].src;
+        counter.textContent = `Video ${yonexCurrentIndex + 1} of ${yonexVideos.length}`;
+    }
+}
+
+function yonexNextVideo() {
+    if (yonexVideos.length === 0) return;
+    yonexCurrentIndex = (yonexCurrentIndex + 1) % yonexVideos.length;
+    yonexLoadVideo();
+}
+
+function yonexPrevVideo() {
+    if (yonexVideos.length === 0) return;
+    yonexCurrentIndex = (yonexCurrentIndex - 1 + yonexVideos.length) % yonexVideos.length;
+    yonexLoadVideo();
+}
+
+// Initialize Yonex video on page load
+document.addEventListener('DOMContentLoaded', function () {
+    yonexLoadVideo();
+    flstudioLoadVideo();
+});
+
+// ============================================
+// FL Studio Video Viewer Functions
+// ============================================
+
+// Placeholder videos - replace with your actual video sources
+let flstudioVideos = [
+    { src: 'https://www.w3schools.com/html/mov_bbb.mp4', title: 'FL Studio Video 1' },
+    { src: 'https://www.w3schools.com/html/movie.mp4', title: 'FL Studio Video 2' },
+    { src: 'https://www.w3schools.com/html/mov_bbb.mp4', title: 'FL Studio Video 3' }
+];
+let flstudioCurrentIndex = 0;
+
+function flstudioLoadVideo() {
+    const video = document.getElementById('flstudioVideo');
+    const counter = document.getElementById('flstudioCounter');
+    if (video && counter && flstudioVideos.length > 0) {
+        video.src = flstudioVideos[flstudioCurrentIndex].src;
+        counter.textContent = `Video ${flstudioCurrentIndex + 1} of ${flstudioVideos.length}`;
+    }
+}
+
+function flstudioNextVideo() {
+    if (flstudioVideos.length === 0) return;
+    flstudioCurrentIndex = (flstudioCurrentIndex + 1) % flstudioVideos.length;
+    flstudioLoadVideo();
+}
+
+function flstudioPrevVideo() {
+    if (flstudioVideos.length === 0) return;
+    flstudioCurrentIndex = (flstudioCurrentIndex - 1 + flstudioVideos.length) % flstudioVideos.length;
+    flstudioLoadVideo();
 }
