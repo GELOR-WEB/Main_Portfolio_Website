@@ -19,24 +19,24 @@ function openWindow(id) {
     const win = document.getElementById(id);
     win.classList.add('active');
     bringToFront(win);
-    if (id === 'resume' || id === 'chrome') {
+    if (id === 'resume' || id === 'chrome' || id === 'Music' || id === 'Yonex' || id === 'flstudio') {
         centerWindow(win);
     }
 }
 
 function centerWindow(win) {
     // Subtract 40px from the height for the taskbar at the bottom
-    const viewportHeight = window.innerHeight - 40; 
+    const viewportHeight = window.innerHeight - 40;
     const viewportWidth = window.innerWidth;
-    
+
     // Get the window's current dimensions (must be set via CSS or inline style)
     const winWidth = win.offsetWidth;
     const winHeight = win.offsetHeight;
-    
+
     // Calculate center coordinates
     let left = (viewportWidth - winWidth) / 2;
     let top = (viewportHeight - winHeight) / 2;
-    
+
     // Ensure it doesn't go off-screen (though centering should prevent this)
     left = Math.max(0, left);
     top = Math.max(0, top);
@@ -159,7 +159,7 @@ function scrollTo2000sSection(id) {
     const scrollContainer = document.querySelector('.website-2000s');
     const targetElement = document.getElementById(id);
     if (scrollContainer && targetElement) {
-        const targetPosition = targetElement.offsetTop - scrollContainer.offsetTop; 
+        const targetPosition = targetElement.offsetTop - scrollContainer.offsetTop;
         scrollContainer.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
@@ -168,3 +168,203 @@ function scrollTo2000sSection(id) {
         console.warn(`Could not scroll: Target element #${id} or .website-2000s container not found.`);
     }
 }
+// ============================================
+// Windows Media Player Functions
+// ============================================
+
+let wmpAudio = document.getElementById('wmpAudio');
+let wmpCurrentTrack = null;
+let wmpIsPlaying = false;
+
+function selectTrack(element) {
+    // Remove active/playing states from all items
+    document.querySelectorAll('.wmp-playlist-item').forEach(item => {
+        item.classList.remove('active', 'playing');
+    });
+    
+    // Set current track as active
+    element.classList.add('active');
+    wmpCurrentTrack = element;
+    
+    // Load the track
+    const src = element.getAttribute('data-src');
+    const trackName = element.querySelector('.wmp-track-name').textContent;
+    
+    wmpAudio.src = src;
+    document.getElementById('wmpNowPlayingTitle').textContent = trackName;
+    
+    // Auto-play when selecting a track
+    togglePlay();
+}
+
+function togglePlay() {
+    if (!wmpCurrentTrack) {
+        // Select first track if none selected
+        const firstTrack = document.querySelector('.wmp-playlist-item');
+        if (firstTrack) selectTrack(firstTrack);
+        return;
+    }
+    
+    if (wmpIsPlaying) {
+        wmpAudio.pause();
+        wmpIsPlaying = false;
+        updatePlayState();
+    } else {
+        wmpAudio.play();
+        wmpIsPlaying = true;
+        updatePlayState();
+    }
+}
+
+function stopPlayback() {
+    wmpAudio.pause();
+    wmpAudio.currentTime = 0;
+    wmpIsPlaying = false;
+    updatePlayState();
+}
+
+function prevTrack() {
+    const items = document.querySelectorAll('.wmp-playlist-item');
+    let currentIndex = Array.from(items).indexOf(wmpCurrentTrack);
+    if (currentIndex > 0) {
+        selectTrack(items[currentIndex - 1]);
+    }
+}
+
+function nextTrack() {
+    const items = document.querySelectorAll('.wmp-playlist-item');
+    let currentIndex = Array.from(items).indexOf(wmpCurrentTrack);
+    if (currentIndex < items.length - 1) {
+        selectTrack(items[currentIndex + 1]);
+    }
+}
+
+function updatePlayState() {
+    const playIcon = document.getElementById('wmpPlayPauseIcon');
+    const visBars = document.querySelector('.wmp-vis-bars');
+    const playIconBig = document.getElementById('wmpPlayIcon');
+    const statusEl = document.getElementById('wmpPlayingStatus');
+    
+    if (wmpIsPlaying) {
+        playIcon.textContent = '';
+        visBars.classList.add('wmp-bars-playing');
+        playIconBig.classList.add('hidden');
+        statusEl.textContent = 'Playing';
+        if (wmpCurrentTrack) wmpCurrentTrack.classList.add('playing');
+    } else {
+        playIcon.textContent = '';
+        visBars.classList.remove('wmp-bars-playing');
+        playIconBig.classList.remove('hidden');
+        statusEl.textContent = 'Stopped';
+        if (wmpCurrentTrack) wmpCurrentTrack.classList.remove('playing');
+    }
+}
+
+function seekTo(value) {
+    if (wmpAudio.duration) {
+        wmpAudio.currentTime = (value / 100) * wmpAudio.duration;
+    }
+}
+
+function setVolume(value) {
+    wmpAudio.volume = value / 100;
+    updateMuteIcon();
+}
+
+function toggleMute() {
+    wmpAudio.muted = !wmpAudio.muted;
+    updateMuteIcon();
+}
+
+function updateMuteIcon() {
+    const muteBtn = document.querySelector('.wmp-mute-btn');
+    if (wmpAudio.muted || wmpAudio.volume === 0) {
+        muteBtn.textContent = '';
+    } else if (wmpAudio.volume < 0.5) {
+        muteBtn.textContent = '';
+    } else {
+        muteBtn.textContent = '';
+    }
+}
+
+// Update seek bar and time display
+setInterval(() => {
+    if (wmpAudio && wmpAudio.duration) {
+        const progress = (wmpAudio.currentTime / wmpAudio.duration) * 100;
+        document.getElementById('wmpSeekBar').value = progress;
+        
+        const minutes = Math.floor(wmpAudio.currentTime / 60);
+        const seconds = Math.floor(wmpAudio.currentTime % 60).toString().padStart(2, '0');
+        document.getElementById('wmpCurrentTime').textContent = minutes + ':' + seconds;
+    }
+}, 500);
+
+// ============================================
+// Yonex Video Viewer Functions
+// ============================================
+
+let yonexVideos = [
+    { src: 'https://www.w3schools.com/html/mov_bbb.mp4', title: 'Sample Video 1' },
+    { src: 'https://www.w3schools.com/html/movie.mp4', title: 'Sample Video 2' },
+    { src: 'https://www.w3schools.com/html/mov_bbb.mp4', title: 'Sample Video 3' }
+];
+let yonexCurrentIndex = 0;
+
+function yonexLoadVideo() {
+    const video = document.getElementById('yonexVideo');
+    const counter = document.getElementById('yonexCounter');
+    if (video && counter && yonexVideos.length > 0) {
+        video.src = yonexVideos[yonexCurrentIndex].src;
+        counter.textContent = 'Video ' + (yonexCurrentIndex + 1) + ' of ' + yonexVideos.length;
+    }
+}
+
+function yonexNextVideo() {
+    if (yonexVideos.length === 0) return;
+    yonexCurrentIndex = (yonexCurrentIndex + 1) % yonexVideos.length;
+    yonexLoadVideo();
+}
+
+function yonexPrevVideo() {
+    if (yonexVideos.length === 0) return;
+    yonexCurrentIndex = (yonexCurrentIndex - 1 + yonexVideos.length) % yonexVideos.length;
+    yonexLoadVideo();
+}
+
+// ============================================
+// FL Studio Video Viewer Functions
+// ============================================
+
+let flstudioVideos = [
+    { src: 'https://www.w3schools.com/html/mov_bbb.mp4', title: 'FL Studio Video 1' },
+    { src: 'https://www.w3schools.com/html/movie.mp4', title: 'FL Studio Video 2' },
+    { src: 'https://www.w3schools.com/html/mov_bbb.mp4', title: 'FL Studio Video 3' }
+];
+let flstudioCurrentIndex = 0;
+
+function flstudioLoadVideo() {
+    const video = document.getElementById('flstudioVideo');
+    const counter = document.getElementById('flstudioCounter');
+    if (video && counter && flstudioVideos.length > 0) {
+        video.src = flstudioVideos[flstudioCurrentIndex].src;
+        counter.textContent = 'Video ' + (flstudioCurrentIndex + 1) + ' of ' + flstudioVideos.length;
+    }
+}
+
+function flstudioNextVideo() {
+    if (flstudioVideos.length === 0) return;
+    flstudioCurrentIndex = (flstudioCurrentIndex + 1) % flstudioVideos.length;
+    flstudioLoadVideo();
+}
+
+function flstudioPrevVideo() {
+    if (flstudioVideos.length === 0) return;
+    flstudioCurrentIndex = (flstudioCurrentIndex - 1 + flstudioVideos.length) % flstudioVideos.length;
+    flstudioLoadVideo();
+}
+
+// Initialize videos on page load
+document.addEventListener('DOMContentLoaded', function() {
+    yonexLoadVideo();
+    flstudioLoadVideo();
+});
