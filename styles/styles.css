@@ -180,8 +180,13 @@ body {
 }
 
 @keyframes loading {
-    0% { left: -4.6vw; }
-    100% { left: 20vw; }
+    0% {
+        left: -4.6vw;
+    }
+
+    100% {
+        left: 20vw;
+    }
 }
 
 /* Desktop */
@@ -599,6 +604,7 @@ body {
     display: flex;
     gap: 10px;
 }
+
 .xp-button-2000s {
     /* Base Windows XP/2000 Button Style */
     padding: 8px 15px;
@@ -608,17 +614,19 @@ body {
     font-weight: bold;
     cursor: pointer;
     text-align: center;
-    display: inline-flex; /* Use flex for icon alignment */
+    display: inline-flex;
+    /* Use flex for icon alignment */
     align-items: center;
     gap: 5px;
     border: 1px solid;
     border-radius: 3px;
-    
+
     /* Default (Unpressed) Look */
     background: linear-gradient(180deg, #f0f0f0 0%, #c0c0c0 100%);
     color: #000;
     border-color: #fff #000 #000 #fff;
-    box-shadow: 1px 1px 0 #000; /* Subtle shadow for depth */
+    box-shadow: 1px 1px 0 #000;
+    /* Subtle shadow for depth */
 }
 
 /* Hover Effect - Change background slightly */
@@ -631,15 +639,19 @@ body {
 /* Active/Pressed Effect - Simulates being clicked down */
 .xp-button-2000s:active {
     border-color: #000 #fff #fff #000;
-    background: #d0d0d0; /* Flat, sunken look */
+    background: #d0d0d0;
+    /* Flat, sunken look */
     box-shadow: none;
-    transform: translate(1px, 1px); /* Move 1px down and right to match sunken border */
+    transform: translate(1px, 1px);
+    /* Move 1px down and right to match sunken border */
 }
 
 /* Custom styles for the demo button */
 .demo-btn {
-    background: linear-gradient(180deg, #ffc107 0%, #ff8c00 100%); /* Orange/Gold color */
-    color: #8b4513; /* Brown/Dark Text */
+    background: linear-gradient(180deg, #ffc107 0%, #ff8c00 100%);
+    /* Orange/Gold color */
+    color: #8b4513;
+    /* Brown/Dark Text */
     border-color: #fff #8b4513 #8b4513 #fff;
 }
 
@@ -654,7 +666,8 @@ body {
 
 /* Custom styles for the GitHub button */
 .github-btn {
-    background: linear-gradient(180deg, #2ecc71 0%, #27ae60 100%); /* Green color */
+    background: linear-gradient(180deg, #2ecc71 0%, #27ae60 100%);
+    /* Green color */
     color: #fff;
     border-color: #fff #1e8449 #1e8449 #fff;
 }
@@ -667,6 +680,7 @@ body {
     border-color: #1e8449 #fff #fff #1e8449;
     background: #27ae60;
 }
+
 .xp-button {
     padding: 8px 16px;
     background: linear-gradient(180deg, #f0f0f0 0%, #c0c0c0 100%);
@@ -714,7 +728,7 @@ body {
 
 .pdf-placeholder-icon {
     font-size: 64px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
 }
 
 /* Chrome Window & 2000s Website */
@@ -783,7 +797,7 @@ body {
 
 .header-banner marquee {
     white-space: nowrap;
-    width: 100%; 
+    width: 100%;
 }
 
 .title-2000s {
@@ -795,23 +809,50 @@ body {
 }
 
 @keyframes rainbow {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
 
-.letter-g, .letter-e, .letter-l, .letter-o, .letter-r {
+.letter-g,
+.letter-e,
+.letter-l,
+.letter-o,
+.letter-r {
     display: inline-block;
     animation: bounce 1s ease-in-out infinite;
 }
 
-.letter-e { animation-delay: 0.1s; }
-.letter-l { animation-delay: 0.2s; }
-.letter-o { animation-delay: 0.3s; }
-.letter-r { animation-delay: 0.4s; }
+.letter-e {
+    animation-delay: 0.1s;
+}
+
+.letter-l {
+    animation-delay: 0.2s;
+}
+
+.letter-o {
+    animation-delay: 0.3s;
+}
+
+.letter-r {
+    animation-delay: 0.4s;
+}
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .glitter {
@@ -821,8 +862,15 @@ body {
 }
 
 @keyframes glow {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
 }
 
 .visitor-counter {
@@ -944,12 +992,14 @@ body {
     margin-bottom: 8px;
     font-size: 14px;
 }
+
 .project-links-2000s {
     display: flex;
     gap: 10px;
     margin-top: 15px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
+
 .project-box-2000s {
     background: #fff;
     border: 3px solid #4169e1;
@@ -1006,15 +1056,19 @@ body {
 
 .footer-2000s a:hover {
     text-decoration: underline;
-} 
- 
+}
+
 /* ============================================
    Windows Media Player Styles
    ============================================ */
 
 .wmp-window {
-    width: 750px;
-    height: 500px;
+    width: 700px !important;
+    height: 550px !important;
+    min-width: 700px !important;
+    min-height: 550px !important;
+    max-width: 700px !important;
+    max-height: 550px !important;
 }
 
 .wmp-header {
@@ -1132,8 +1186,13 @@ body {
 }
 
 @keyframes barBounce {
-    0% { height: 20px; }
-    100% { height: 80px; }
+    0% {
+        height: 20px;
+    }
+
+    100% {
+        height: 80px;
+    }
 }
 
 .wmp-play-icon {
